@@ -1,0 +1,1 @@
+PHASE 1 - For this phase I set up the vault with strict mode and wrote an accessVault function that returns Access Granted only for the correct key and deny anything else. Use strict is a safety net beecause it turns mistakes JS would normally let by into real errors to catch them early.
