@@ -1,1 +1,3 @@
 PHASE 1 - For this phase I set up the vault with strict mode and wrote an accessVault function that returns Access Granted only for the correct key and deny anything else. Use strict is a safety net beecause it turns mistakes JS would normally let by into real errors to catch them early.
+
+PHASE 2 - Returning a value just gives a result and continutes on even if unchecked. But an error stops the function and you're met with the problem needing to be handled. I'd say a developer would prefer a custom error class that way you can tell exactly what is wrong.
