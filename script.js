@@ -29,7 +29,25 @@ function attemptEntry(key) {
   }
 }
 
+function throwsError(key, ErrorType) {
+  try {
+    accessVault(key);
+    return false;
+  } catch (e) {
+    return e instanceof ErrorType;
+  }
+}
+
+function runTests() {
+  console.log("Correct key:", accessVault("SECRET_123") === "Access Granted" ? "PASS" : "FAIL");
+  console.log("Undefined key:", throwsError(undefined, InvalidKeyError) ? "PASS" : "FAIL");
+  console.log("NaN key:", throwsError(NaN, InvalidKeyError) ? "PASS" : "FAIL");
+  console.log("Wrong key:", throwsError("WRONG", VaultLockedError) ? "PASS" : "FAIL");
+}
+
 attemptEntry("SECRET_123");
 attemptEntry("password");
 attemptEntry(undefined);
 attemptEntry(NaN);
+
+runTests();
