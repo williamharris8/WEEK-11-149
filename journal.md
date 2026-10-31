@@ -5,3 +5,5 @@ PHASE 2 - Returning a value just gives a result and continutes on even if unchec
 PHASE 3 - Catch blocks only run for an error but a finally runs every time. If a program opened a connection to a database and an error occurred the finally block could close the connection.
 
 PHASE 4 - Automated tests are reliable since you check the exact error type instead of guessing what happened. I learned when an error is thrown the function stops which is why the return false in throwsError test only runs if no error was thrown.
+
+PHASE 5 - Null and empty strings count as wrong keys insteda of missing ones. Also the console showed Error instead of VaultLockedError when the error wasnt caught becuase my one line classes dont set a name.

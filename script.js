@@ -50,4 +50,11 @@ attemptEntry("password");
 attemptEntry(undefined);
 attemptEntry(NaN);
 
+attemptEntry("");
+attemptEntry(null);
+attemptEntry(123);
+attemptEntry({});
+attemptEntry([]);
+attemptEntry("secret_123");
+
 runTests();
